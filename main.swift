@@ -1,16 +1,3 @@
-print("Funcionalidad de una Calculadora en Swift")
-
-
-//Se extraen los valores de algun lado
-var valor1: Double = 0.0, valor2: Double = 0.0, operacion: String?
-
-print("Digite el primer numero")
-valor1 = Double(readLine()!)!
-
-print("Digite el segundo numero")
-valor2 = Double(readLine()!)!
-
-
 //Comienza la clase principal
 class calculadora{    
 
@@ -33,8 +20,20 @@ class calculadora{
       let r=x/y
       return r
   }
-
 }
+
+
+print("Funcionalidad de una Calculadora en Swift")
+
+//Se extraen los valores de algun lado
+var valor1: Double = 0.0, valor2: Double = 0.0, operacion: String?
+
+print("Digite el primer numero")
+valor1 = Double(readLine()!)!
+
+print("Digite el segundo numero")
+valor2 = Double(readLine()!)!
+
 //Calculadora funcional?
 print("Que operación va a realizar?")
 print("1.-Suma")
