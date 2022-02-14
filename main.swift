@@ -25,7 +25,8 @@ class calculadora{
 //Se crea el loop para repetir funcionalidad
 var loop:String = "n"
 repeat{
-  print("Funcionalidad de una Calculadora en Swift")
+  print("Calculadora en Swift")
+  print("Bienvenido en Swift")
 
   //Se extraen los valores de algun lado
   var valor1: Double = 0.0, valor2: Double = 0.0, operacion: String?
@@ -68,7 +69,5 @@ repeat{
   print("Desea realizar otra operacion ('s'/'n')")
   loop = readLine()!
   print("--------------------------------------------------------")
-
-
 
 }while(loop == "s" || loop == "si" || loop == "Si" || loop == "SI")
