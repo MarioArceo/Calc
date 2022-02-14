@@ -36,13 +36,46 @@ repeat{
 
   //se va a crear un ciclo que le dara funcionalidad y se rompera solo si el operando es =
   //podrían ser funciones independientes
+  
+  var accion:String = "n"
+  repeat{
+  accion = readLine()!
+  switch(accion) {
+    case "+" :
+        print ("suma ")
+        break; 
+
+    case "-" :
+        print ("resta ")
+        break; 
+        
+    case "*" :
+        print ("multiplicacion ")
+        break; 
+        
+    case "/" :
+        print ("division ")
+        break; 
+
+    case "." :
+        print ("punto ")
+        break; 
+        
+    case "n" :
+        print ("negativo ")
+        break;
+
+    case "=" :
+        print ("muestra solucion ")
+        break;
+
+    default : 
+        print ("ingresaste un numero");
+  }
+
+  }while(accion != "=")
 
 
-
-
-
-  print("Digite el segundo numero")
-  valor2 = Double(readLine()!)!
 
   //Calculadora funcional?
   print("Que operación va a realizar?")
