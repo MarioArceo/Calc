@@ -26,7 +26,7 @@ class calculadora{
 var loop:String = "n"
 repeat{
   print("Calculadora en Swift")
-  print("Bienvenido en Swift")
+  print("Bienvenido...")
 
   //Se extraen los valores de algun lado
   var valor1: Double = 0.0, valor2: Double = 0.0, operacion: String?
@@ -48,22 +48,22 @@ repeat{
 
   switch(operacion) {
     case "1" :
-        print ("Resultado de la suma: ",  calculadora().suma(x:valor1, y:valor2))
+        print ("Resultado de la suma de ",valor1 ," y ", valor2," es: ",  calculadora().suma(x:valor1, y:valor2))
         break; 
     case "2" :
-        print ("Resultado de la resta: ",  calculadora().resta(x:valor1, y:valor2))
+        print ("Resultado de la resta: de ",valor1 ," y ", valor2," es: ",  calculadora().resta(x:valor1, y:valor2))
         break; 
         
     case "3" :
-        print ("Resultado de la multiplicacion: ",  calculadora().multiplicacion(x:valor1, y:valor2))
+        print ("Resultado de la multiplicacion: de ",valor1 ," y ", valor2," es: ",  calculadora().multiplicacion(x:valor1, y:valor2))
         break; 
         
     case "4" :
-        print ("Resultado de la division: ",  calculadora().division(x:valor1, y:valor2))
+        print ("Resultado de la division:de ",valor1 ," y ", valor2," es: ",  calculadora().division(x:valor1, y:valor2))
         break; 
     
     default : 
-        print ("Resultado de la suma: ",  calculadora().suma(x:valor1, y:valor2));
+        print ("Por favor Ingrese un número");
   }
 
   print("Desea realizar otra operacion ('s'/'n')")
