@@ -34,6 +34,13 @@ repeat{
   print("Digite el primer numero")
   valor1 = Double(readLine()!)!
 
+  //se va a crear un ciclo que le dara funcionalidad y se rompera solo si el operando es =
+  //podrían ser funciones independientes
+
+
+
+
+
   print("Digite el segundo numero")
   valor2 = Double(readLine()!)!
 
