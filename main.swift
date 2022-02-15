@@ -1,9 +1,7 @@
 //Se crea el loop para repetir funcionalidad
 var loop:String = "n"
-
   print("Calculadora en Swift")
   print("Bienvenido...")
-
   var accion:String = "", n1:String = "", n2:String = "", operacion:String = "", res:Double = 0.0, rep:Bool = true, operador:String = ""
   var restemp:String = ""
 
@@ -15,26 +13,40 @@ var loop:String = "n"
 repeat{
   accion = readLine()!
   switch(accion) {
-    case "+" ://suma
+    case "+" :
         if(n1 == "" ){
           n1 = n2            
-        }else{
-         // res = Double(n1)! + Double(Int(n2)!)
-         // n1 = String(res)    
-         func2()            
+        }else{    
+          func2()            
           n1 = restemp     
         }     
         func1()
       break; 
-    case "-" ://resta
+    case "-" :
         if(n1 == "" ){
           n1 = n2            
-        }else{
-          //res = Double(n1)! - Double(Int(n2)!)
-          //n1 = String(res)       
+        }else{      
           func2()
           n1 = restemp
         }            
+        func1()
+      break; 
+    case "*" :
+        if(n1 == "" ){
+          n1 = n2            
+        }else{    
+          func2()            
+          n1 = restemp     
+        }     
+        func1()
+      break; 
+    case "/" :
+        if(n1 == "" ){
+          n1 = n2            
+        }else{    
+          func2()            
+          n1 = restemp     
+        }     
         func1()
       break; 
     case "=" :
@@ -47,16 +59,12 @@ repeat{
       //cuando pone un digito extra
       rep = true          
       operacion = operacion + accion
-      n2 = n2 + accion
-      
+      n2 = n2 + accion      
       if(n1 == "" ){
       }else{     
         func2()
-      }
-        
-      print ("n1:  ", n1)
-      print ("n2:  ", n2)
-      print ("resultado: ", restemp)            
+      }        
+      print (operacion, " = ", restemp)            
       //print ("----------------------")       
       //print ("El Resultado es: ", restemp)
   }
@@ -77,6 +85,12 @@ func func2(){
             break; 
           case "-" :               
             restemp = String(Double(n1)! - Double(Int(n2)!))
+            break; 
+          case "*" :               
+            restemp = String(Double(n1)! * Double(Int(n2)!))
+            break; 
+          case "/" :               
+            restemp = String(Double(n1)! / Double(Int(n2)!))
             break; 
           default :
             break;
