@@ -1,27 +1,3 @@
-//Comienza la clase principal
-class calculadora{   
-
-  func suma(x: Double, y: Double) -> Double {
-      let r=x+y
-      return r
-  }
-
-  func resta(x: Double, y: Double) -> Double {
-      let r=x-y
-      return r
-  }
-
-  func multiplicacion(x: Double, y: Double) -> Double {
-      let r=x*y
-      return r
-  }
-
-  func division(x: Double, y: Double) -> Double {
-      let r=x/y
-      return r
-  }
-}
-
 //Se crea el loop para repetir funcionalidad
 var loop:String = "n"
 repeat{
@@ -29,82 +5,48 @@ repeat{
   print("Bienvenido...")
 
   //Se extraen los valores de algun lado
-  var valor1: Double = 0.0, valor2: Double = 0.0, operacion: String?
+  //var valor1: Int = 0//, valor2: Double = 0.0, opc: String?  
+  var accion:String = "", n1:String = "", n2:String = "", operacion:String = "", res:Double = 0.0, rep:Bool = true, operador:String = ""
 
   print("Digite el primer numero")
-  valor1 = Double(readLine()!)!
+  n2 = readLine()!
+  //valor1 = Int(n2)!
+  res = res + Double(n2)!
+  operacion = operacion + n2
 
-  //se va a crear un ciclo que le dara funcionalidad y se rompera solo si el operando es =
-  //podrían ser funciones independientes
-  
-  var accion:String = "n"
-  repeat{
-  accion = readLine()!
-  switch(accion) {
-    case "+" :
-        print ("suma ")
-        break; 
+repeat{
+   accion = readLine()!
+   switch(accion) {
+      case "+" :
+          if(n1 == "" ){
+            print ("n1 esta vacio")
+          }else{
+            res = Double(Int(n1)!) + Double(Int(n2)!)
+            n1 = String(res)            
+            print ("El Resultado es: ", n1)
+          }
+          
+          rep = true 
+          n1 = n2 
+          n2 = ""
+          operador = accion
+          operacion = operacion + accion
+          print (operacion)
+          print (n2)
+          break; 
+      default : 
+          rep = true          
+          operacion = operacion + accion
+          n2 = n2 + accion
+          print (operacion)
+          if(n1 == "" ){
+          }else{         
+            print ("El Resultado es: ", n1)
+          }
+    }
 
-    case "-" :
-        print ("resta ")
-        break; 
-        
-    case "*" :
-        print ("multiplicacion ")
-        break; 
-        
-    case "/" :
-        print ("division ")
-        break; 
+}while(rep != false)
 
-    case "." :
-        print ("punto ")
-        break; 
-        
-    case "n" :
-        print ("negativo ")
-        break;
-
-    case "=" :
-        print ("muestra solucion ")
-        break;
-
-    default : 
-        print ("ingresaste un numero");
-  }
-
-  }while(accion != "=")
-
-
-
-  //Calculadora funcional?
-  print("Que operación va a realizar?")
-  print("1.-Suma")
-  print("2.-Resta")
-  print("3.-Multiplicación")
-  print("4.-División")
-
-  operacion = readLine()!
-
-  switch(operacion) {
-    case "1" :
-        print ("Resultado de la suma de ",valor1 ," y ", valor2," es: ",  calculadora().suma(x:valor1, y:valor2))
-        break; 
-    case "2" :
-        print ("Resultado de la resta: de ",valor1 ," y ", valor2," es: ",  calculadora().resta(x:valor1, y:valor2))
-        break; 
-        
-    case "3" :
-        print ("Resultado de la multiplicacion: de ",valor1 ," y ", valor2," es: ",  calculadora().multiplicacion(x:valor1, y:valor2))
-        break; 
-        
-    case "4" :
-        print ("Resultado de la division:de ",valor1 ," y ", valor2," es: ",  calculadora().division(x:valor1, y:valor2))
-        break; 
-    
-    default : 
-        print ("Por favor Ingrese un número");
-  }
 
   print("Desea realizar otra operacion ('s'/'n')")
   loop = readLine()!
